@@ -3,6 +3,7 @@ from queue import Queue
 from collections import deque 
 import bisect
 from math import gcd
+import heapq
 
 # list
 arr = list()
@@ -23,6 +24,13 @@ dq.popleft()
 dq.appendleft(1)
 dq.pop()
 len(dq)
+
+# heap
+h = []
+heapq.heapify() # inplace heapifies the array.
+heapq.heappush(h, (1, 2)) # push a tuple, list to the heap
+val = heapq.heappop() 
+len(h)
 
 # initialize multi dimensional array
 vis =[[False for i in range(3)] for i in range(3)]
