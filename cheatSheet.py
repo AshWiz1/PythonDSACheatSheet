@@ -47,7 +47,7 @@ for i in sett: print(i)
 dic = {}
 print(1 in dic)
 dic[1] = 3
-dic.get(1, 0) # gets the value at key 1, if it does not exist it returns 0
+dic.get(5, 1) # gets the value at key 1, if it does not exist it returns 0
 dic.pop(1) # removes the entry from dictionary
 len(dic)
 for i in dic: print(i) # gets the keys in dic
