@@ -50,7 +50,8 @@ dic[1] = 3
 dic.get(5, 1) # gets the value at key 1, if it does not exist it returns 0
 dic.pop(1) # removes the entry from dictionary
 len(dic)
-for i in dic: print(i) # gets the keys in dic
+for i in dic: print(i) # iterate through the keys in dic. Gets exception when dic is modified within the loop
+for i in list(dic): print(i) # iterate through the key of the dic. No exception when dic is modified within the loop
 
 # array
 arr = [1, 2]
@@ -88,6 +89,9 @@ print(str(num)) # converts num to string
 arr = [1,3]
 print(bisect.bisect_left(arr, 2, 0, len(arr))) # gets the first index of element greater than equal to value 
 print(bisect.bisect_right(arr, 2, 0, len(arr))) # gets the first index of element just greater than value
+
+tupleArr = [(1, "value"), (2, "value")]
+bisect.bisect_right(tupleArr, 1, 0, len(tupleArr), key=lambda x: x[0]) # pass the "key" as custom comparator function
 
 # math
 print(gcd(4,2))
