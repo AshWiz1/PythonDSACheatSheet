@@ -95,3 +95,5 @@ bisect.bisect_right(tupleArr, 1, 0, len(tupleArr), key=lambda x: x[0]) # pass th
 
 # math
 print(gcd(4,2))
+print("2".isdigit()) # Check if a given string is number
+print("A".isalpha()) # Check if a given string is alphabet
