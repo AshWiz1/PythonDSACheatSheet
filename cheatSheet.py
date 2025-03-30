@@ -5,6 +5,9 @@ import bisect
 from math import gcd
 import heapq
 
+# sorted list
+# https://grantjenks.com/docs/sortedcontainers/sortedlist.html#sortedcontainers.SortedList.bisect_right
+
 # list
 arr = list()
 arr.append(1)

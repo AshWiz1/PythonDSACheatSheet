@@ -12,3 +12,7 @@ print("".join([str(i) for i in arr]))
 
 dic ={1: 2, 3: 4}
 print(list(dic.keys()))
+
+print([1, 2].sort())
+
+print(-10%11)
