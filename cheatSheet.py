@@ -4,9 +4,19 @@ from collections import deque
 import bisect
 from math import gcd
 import heapq
+from sortedcontainers import SortedList
 
 # sorted list
 # https://grantjenks.com/docs/sortedcontainers/sortedlist.html#sortedcontainers.SortedList.bisect_right
+sortedList = SortedList(key = lambda x: -x) # optional key which tells sortedList how to compare its elements
+sortedList.add(1)
+sortedList.add(2)
+sortedList.add(2)
+sortedList.bisect_left(2) # Just like normal bisect_left  => return first index >= val
+sortedList.bisect_right(2) # Returns first index > val
+sortedList.pop(0) # Removes value at given index
+sortedList.remove(1) # Removes a certain value
+sortedList.index(2) # Gets the index of certain value, has optional start, stop optional parameters
 
 # list
 arr = list()
@@ -30,9 +40,9 @@ len(dq)
 
 # heap
 h = []
-heapq.heapify() # inplace heapifies the array.
+heapq.heapify(h) # inplace heapifies the array.
 heapq.heappush(h, (1, 2)) # push a tuple, list to the heap
-val = heapq.heappop() 
+val = heapq.heappop(h) 
 len(h)
 
 # initialize multi dimensional array
@@ -98,5 +108,5 @@ bisect.bisect_right(tupleArr, 1, 0, len(tupleArr), key=lambda x: x[0]) # pass th
 
 # math
 print(gcd(4,2))
-print("2".isdigit()) # Check if a given string is number
+print("22".isdigit()) # Check if a given string is number
 print("A".isalpha()) # Check if a given string is alphabet
