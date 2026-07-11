@@ -4,7 +4,7 @@ from collections import deque
 import bisect
 from math import gcd
 import heapq
-from sortedcontainers import SortedList
+from sortedcontainers import SortedList, SortedSet, SortedDict
 
 # sorted list
 # https://grantjenks.com/docs/sortedcontainers/sortedlist.html#sortedcontainers.SortedList.bisect_right
@@ -17,6 +17,9 @@ sortedList.bisect_right(2) # Returns first index > val
 sortedList.pop(0) # Removes value at given index
 sortedList.remove(1) # Removes a certain value
 sortedList.index(2) # Gets the index of certain value, has optional start, stop optional parameters
+
+sortedSet = SortedSet()
+sortedDict = SortedDict()
 
 # list
 arr = list()
